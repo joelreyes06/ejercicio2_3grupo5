@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejercicio2_3grupo.Views.Listado"
+               Background="Beige">
+
+    <ContentPage.Content  BackgroundColor="Beige">
+        <StackLayout  BackgroundColor="Beige">
+            <Frame  BackgroundColor="LightGreen" Padding="15">
+                <Grid>
+                    <Label Text="Deslice para mas opciones " 
+                       HorizontalOptions="Center"
+                       TextColor="Black" 
+                       FontSize="15"
+                       FontAttributes="Bold" />
+
+                    <ImageButton Source="volver.png"
+                                 x:Name="btnVolver"
+                                 HorizontalOptions="Start"
+                                 HeightRequest="25"
+                                 Margin="10,0,0,0"
+                                 BackgroundColor="Transparent"
+                                 Clicked="btnVolver_Clicked" />
+                </Grid>
+            </Frame>
+
+            <ListView x:Name="list" 
+                      HasUnevenRows="True"
+                       Background="Beige">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+
+                                    <SwipeItems>
+                                        <SwipeItem Text="AUDIO"
+                                          
+                                           BackgroundColor="Blue"
+                                           Invoked="SwipeItem_Invoked" />
+
+                                        <SwipeItem Text="ELIMINAR"
+                                           
+                                           BackgroundColor="Red"
+                                           Invoked="SwipeItem_Invoked_1" />
+
+                                    </SwipeItems>
+
+                                </SwipeView.LeftItems>
+
+                                <Grid Padding="10">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="40" />
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0"
+                                       Text="{Binding Id}"
+                                       FontAttributes="Bold" />
+
+                                    <Label Grid.Row="0" Grid.Column="1"
+                                       Text="{Binding Fecha}"
+                                       FontAttributes="Bold" />
+
+                                    <Label Grid.Row="0" Grid.Column="2"
+                                       Text="{Binding Descripcion}"
+                                       FontAttributes="Bold" />
+
+                                </Grid>
+
+                            </SwipeView>
+
+
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

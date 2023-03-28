@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ejercicio2_3grupo.MainPage"
+             BackgroundColor="Beige">
+
+    <ScrollView>
+        <StackLayout>
+
+            <Frame  BackgroundColor="LightGreen" Padding="15">
+
+                <Label Text="APP PARA AUDIOS GRUPO#5"
+                       HorizontalOptions="Center"
+                       TextColor="Black" 
+                       FontSize="25"                       
+                       FontAttributes="Bold"  
+                      
+                       />
+
+            </Frame>
+
+            <Image Source="sonido.png"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Start"
+               WidthRequest="200"
+               HeightRequest="500"
+                   Margin="0,0,0,0"
+               />
+
+            <Entry x:Name="txtDescription"
+                   Keyboard="Text"
+                   Placeholder="Descripcion del audio"
+                   Margin="10,0,20,10"            
+                   HorizontalTextAlignment="Center"
+               />
+
+            <Frame  BackgroundColor="LightGreen" Padding="5">
+
+                <Label x:Name="txtMessage"
+                       Text="GRABE UN AUDIO PORFAVOR" 
+                       HorizontalOptions="Center"
+                       TextColor="Gray" 
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       />
+
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Button x:Name="btnGrabar" 
+                        Text="Grabar audio"
+                        BorderWidth="3"
+                        
+                        BorderColor="LightGray"
+                        BackgroundColor="LightGreen"
+                        CornerRadius="10"
+                        HorizontalOptions="StartAndExpand" 
+                        Clicked="BtnGrabar_Clicked" />
+
+               
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,20">
+                <Button Text="SALVAR" 
+                        x:Name="btnGuardar" 
+                        BorderWidth="3"
+                        BorderColor="LightGray"
+                        BackgroundColor="LightGreen"
+                        CornerRadius="10"
+                        HorizontalOptions="StartAndExpand" 
+                        Clicked="BtnGuardar_Clicked" />
+
+                <Button Text="Listado"
+                        x:Name="btnLista"
+                        HorizontalOptions="EndAndExpand" 
+                        BorderWidth="3"
+                        BorderColor="LightGray"
+                        BackgroundColor="LightGreen"
+                        CornerRadius="10"
+                        Clicked="BtnLista_Clicked"/>
+
+               
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
